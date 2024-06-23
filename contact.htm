@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #385170;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+button {
+    margin-right: 30px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+label{
+    color: black;
+}
+#totalPrice {
+  font-size: 24px;
+  font-weight: bold;
+  color: aliceblue;
+}
+h1 {
+    text-align: center;
+}
+
+.address, .contact {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+.container{display: flex;}
+.d1{
+    width: 100%;
+}
+.d2{
+    width: 50%;
+}
+.dm{
+    width: 30%;
+}
+label{font-size: 18px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 700;}
+
+
+    </style>
+    
+</head>
+<body>
+    
+    
+      
+    <header>
+        <div class="mainLogo">Journey Through Burma</div>
+          
+       
+        <nav>
+            <ul>
+                <li id="n"><a href="index.htm" >Home</a></li>
+                
+                
+                <li id="n"><a href="#ticket.htm" >Ticket Booking</a></li>
+                <li id="n"><a href="#">Contact us</a></li>
+                <li> 
+                    
+                    
+            </li>
+            </ul>
+        </nav>
+        
+                
+    
+    </header>
+    
+    
+    <div class="container">
+        <div class="d1">
+            <h2>Contact us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+        
+                <input type="submit" value="Submit">
+            </form>
+    
+        </div>
+        <div class="dm"></div>
+        <div class="d2">
+            <h2>Contact Information</h2>
+            
+            <div class="contact">
+               <label for="">Email:</label>
+                <p> journeythroughburma@gmail.com</p><br><br>
+                <label for="">Phone:</label>
+                <p>+123-460-7890</p>
+            </div>
+        </div>
+
+        </div>
+        
+    </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+    
+           
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+    
+            
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
